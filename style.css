@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #111827;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 700px;
+    width: 800px;
+    border-radius: 10px;
+    background: linear-gradient(to right,
+            rgb(75, 121, 161),
+            rgb(40, 62, 81))
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 40px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#row {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 30px;
+    margin: 20px 70px;
+}
+
+#inputBox {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 10px 39px;
+    margin-right: 3px;
+    border-radius: 20px;
+    background-color: #111827 ;
+    color: whitesmoke;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+button:hover{
+    color: #111827;
+    background-color: #fe5f55;
+    transition: 0.5s;
+}
+
+#clearAll{
+    position: absolute;
+    right: 43rem;
+    bottom: 57px;
+}
+
+
+.listItems{
+    background-color: white;
+    width: 657px;
+    min-height: 360px;
+    margin: 40px 70px;
+    border-radius: 30px;
+    padding: 15px 0px 10px 60px;
+}
+
+ul li {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    padding-top: 10px ;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('https://cdn1.iconfinder.com/data/icons/get-me-home/512/circle_circular_blank_check-512.png');
+    top: 10px;
+    left:-34px;
+    background-size: cover;
+    background-position: center;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: grey;
+}
+
+ul li.checked::before{
+    background-image: url('https://www.shutterstock.com/image-vector/check-mark-icon-blue-circle-600nw-1274154349.jpg');
+}
+
+ul li span{
+   position: absolute;
+   right: 25px;
+   top: 5px;
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   line-height: 40px;
+   font-size: 22px;
+   color: #111827;
+   border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: lightgrey;
+}
